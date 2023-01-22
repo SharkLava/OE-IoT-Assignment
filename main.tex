@@ -1,0 +1,146 @@
+\documentclass{article}
+
+\usepackage{arxiv}
+
+\usepackage[utf8]{inputenc} % allow utf-8 input
+\usepackage[T1]{fontenc}    % use 8-bit T1 fonts
+\usepackage{hyperref}       % hyperlinks
+\usepackage{url}            % simple URL typesetting
+\usepackage{booktabs}       % professional-quality tables
+\usepackage{amsfonts}       % blackboard math symbols
+\usepackage{nicefrac}       % compact symbols for 1/2, etc.
+\usepackage{microtype}      % microtypography
+\usepackage{cleveref}       % smart cross-referencing
+\usepackage{graphicx}
+\usepackage{natbib}
+\usepackage{doi}
+
+\title{Analysis of DensePose}
+
+% Here you can change the date presented in the paper title
+%\date{September 9, 1985}
+% Or remove it
+%\date{}
+
+\author{ \href{https://github.com/SharkLava}{\includegraphics[scale=0.06]{cat.pdf}\hspace{1mm}Vishal M Kalathil}
+	\\BTech AI/DS\\
+	Shiv Nadar University Chennai\\
+	\texttt{vishal21110097@snuchennai.edu.in} \\
+	%% examples of more authors
+	%% \AND
+	%% Coauthor \\
+	%% Affiliation \\
+	%% Address \\
+	%% \texttt{email} \\
+	%% \And
+	%% Coauthor \\
+	%% Affiliation \\
+	%% Address \\
+	%% \texttt{email} \\
+	%% \And
+	%% Coauthor \\
+	%% Affiliation \\
+	%% Address \\
+	%% \texttt{email} \\
+}
+
+% Uncomment to override  the `A preprint' in the header
+\renewcommand{\headeright}{Assignment}
+\renewcommand{\undertitle}{Assignment}
+%\renewcommand{\shorttitle}{\textit{arXiv} Template}
+
+%%% Add PDF metadata to help others organize their library
+%%% Once the PDF is generated, you can check the metadata with
+%%% $ pdfinfo template.pdf
+\begin{document}
+\maketitle
+
+
+
+\section{Topic Summary}
+\label{sec:summary}
+The paper, ~\cite{DensePose} presents a method for using WiFi signals to identify and track specific individuals within a given space. The authors propose a system called Person-in-WiFi that utilizes WiFi signals to extract unique characteristics of an individual's body and use them to identify that person.
+
+The system is based on the observation that a person's body can affect the WiFi signals in a unique way, creating a "body signature" that can be used to identify the person. Person-in-WiFi uses a combination of WiFi signal strength and phase information to extract this body signature. The authors use a dataset of real-world WiFi measurements to train and evaluate the system, showing that it can accurately identify and track individuals with an accuracy of up to 96.7%.
+
+The authors also discuss the potential applications of the system in areas such as security, location-based services, and activity recognition. In terms of security, Person-in-WiFi could be used to identify and track individuals in sensitive areas such as airports, government buildings, and military bases. In location-based services, it could be used to provide personalized recommendations and services based on a person's location and movements. And in activity recognition, it could be used to monitor and track the actions of individuals within a given space.
+
+In addition to these potential applications, the authors also discuss the limitations of the system and the potential for future work. They note that the system's accuracy can be affected by factors such as the orientation and distance of the person's body from the WiFi receiver, as well as the presence of other objects in the area. They also suggest that future work could focus on incorporating additional signal information and using machine learning techniques to improve the system's accuracy.
+
+Overall, the paper presents a promising method for using WiFi signals to identify and track specific individuals within a given space. The Person-in-WiFi system shows high accuracy and has the potential to be applied in various scenarios such as security, location-based services and activity recognition. The authors also point out the limitations and areas for future work, which suggests that the research is ongoing and further improvement of the system can be expected in the future.
+
+
+\section{Key Ideas and Contributions}
+\label{sec:ideas}
+\begin{itemize}
+    \item Usage of WiFi: using WiFi instead of a camera based setup
+    \item Body Signature Extraction: using a combination of WiFi signal strength and phase information to extract unique "body signature" that can be used to identify a person.
+    \item High accuracy: achieving an accuracy of up to 96.7\% in identifying and tracking individuals using WiFi signals.
+    \item RCNN: using converting WiFi signal map into an "image" and the application of image based techniques
+\end{itemize}
+
+
+\section{My Views}
+\label{sec:personal_views}
+
+\subsection{Thoughts on the paper}
+The paper presents a novel approach for identifying individuals based on their unique WiFi signatures. The authors propose the use of a deep neural network to analyze WiFi signals and accurately identify individuals in a given environment.
+
+One of the key advantages of using WiFi for person perception is that it does not require direct line-of-sight and can work through walls and other obstacles. This makes it a valuable tool for security and surveillance applications where privacy is a concern. The ability to identify specific individuals in real-time could greatly improve the accuracy and efficiency of these systems.
+
+The paper also mentions that this technique could be used in other applications like smart homes, where the system can automatically identify who is in the house and adjust the settings accordingly. For example, the lights and temperature could be automatically adjusted based on who is present in the house.
+
+However, it is also important to consider the potential privacy implications of using WiFi signals in this way. The authors mention that they have considered privacy concerns in their research and have proposed methods to ensure that the collected data is not shared with any third-party. Additionally, the authors have also proposed the use of a "privacy-preserving" algorithm to ensure that only authorized parties can access the data.
+
+In conclusion, the paper presents a valuable technique for identifying individuals based on their unique WiFi signatures. The ability to identify specific individuals in real-time has the potential to greatly improve the accuracy and efficiency of security and surveillance systems. However, it is important to consider the potential privacy implications and ensure that any such systems are implemented responsibly.
+
+
+\subsection{My Vision for the Future of the Field}
+Aside from the obvious applications mentioned previously, I feel like the technology woould be very useful in surveillance of large public places like malls, etc by just deploying a small cluster of IoT devices.
+It is also possible to chain together data from multiple networks to create a largescale 3 dimensional map of an area, with real-time data.
+
+A multilayered approach with different neural networks tuned to detect diffreent things can help create a "map" of the area which would be very useful in many fields like home automation and military recon. 
+
+With the combination of this and gait analysis I feel that we might be able to uniquely identify an individual across a time period in the same network or even different networks. 
+This could prove to become a very cheap method to track individual movement or to even improve an existing Camera based setup as this allows us to track them even in occluded areas.
+
+The technology seems like it could be very versatile and could prove to be very useful especially in the fields of IoT. 
+
+\section{Conclusion} % (fold)
+\label{sec:Conclusion}
+
+Despite being very very new, the paper presents an idea with great potential in many many fields and the ability to grow with the developments in technology in the future. 
+It presents the oppurtunity for cheap mass surveillance with great accuracy and the potential to track individuals uniquely. 
+Although it is a fascinating idea and would revolutionize some fields, I am not looking forward to its deployment on the field due to the privacy concerns and the ease with which it can be misused.
+% section section name (end)
+
+
+\bibliographystyle{unsrtnat}
+\bibliography{references}  %%% Uncomment this line and comment out the ``thebibliography'' section below to use the external .bib file (using bibtex) .
+
+
+%%% Uncomment this section and comment out the \bibliography{references} line above to use inline references.
+% \begin{thebibliography}{1}
+
+% 	\bibitem{kour2014real}
+% 	George Kour and Raid Saabne.
+% 	\newblock Real-time segmentation of on-line handwritten arabic script.
+% 	\newblock In {\em Frontiers in Handwriting Recognition (ICFHR), 2014 14th
+% 			International Conference on}, pages 417--422. IEEE, 2014.
+
+% 	\bibitem{kour2014fast}
+% 	George Kour and Raid Saabne.
+% 	\newblock Fast classification of handwritten on-line arabic characters.
+% 	\newblock In {\em Soft Computing and Pattern Recognition (SoCPaR), 2014 6th
+% 			International Conference of}, pages 312--318. IEEE, 2014.
+
+% 	\bibitem{hadash2018estimate}
+% 	Guy Hadash, Einat Kermany, Boaz Carmeli, Ofer Lavi, George Kour, and Alon
+% 	Jacovi.
+% 	\newblock Estimate and replace: A novel approach to integrating deep neural
+% 	networks with existing applications.
+% 	\newblock {\em arXiv preprint arXiv:1804.09028}, 2018.
+
+% \end{thebibliography}
+
+\end{document}
